@@ -1,0 +1,10 @@
+uuid: 48a4d105-f335-4ec7-9a67-3317037e06fc
+langcode: es
+status: true
+dependencies: {  }
+id: article
+label: Artículo
+description: 'Use los <em>artículos</em> para contenido que tenga relevancia temporal como las noticias o las publicaciones en blogs.'
+source_type: sql
+module: migrate_wizard
+shared_configuration: 0

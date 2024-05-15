@@ -1,0 +1,20 @@
+uuid: 78893197-ff33-4e86-b0f1-d8b8bf4ab191
+langcode: es
+status: true
+dependencies:
+  config:
+    - media.type.document
+id: media.document.name
+field_name: name
+entity_type: media
+bundle: document
+label: Nombre
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

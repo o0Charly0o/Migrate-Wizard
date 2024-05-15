@@ -1,0 +1,14 @@
+uuid: 476e0601-901b-461c-bb4c-aa11e5145679
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.editor_articulos
+  module:
+    - user
+id: user_remove_role_action.editor_articulos
+label: 'Elimina el rol editor articulos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor_articulos

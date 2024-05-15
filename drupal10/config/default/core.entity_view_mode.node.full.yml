@@ -1,0 +1,13 @@
+uuid: e1f360e4-127a-45ae-b962-9defe34305da
+langcode: es
+status: false
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: QJ2aZ1xfVf59aq6Pz5X7fyUOa2HxuCoTwQ_RQjoulAU
+id: node.full
+label: 'Contenido completo'
+description: ''
+targetEntityType: node
+cache: true

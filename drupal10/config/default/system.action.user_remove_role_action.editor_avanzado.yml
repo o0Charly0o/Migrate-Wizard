@@ -1,0 +1,14 @@
+uuid: 125a0448-ad09-48d5-bbdf-dfd56a48d97d
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.editor_avanzado
+  module:
+    - user
+id: user_remove_role_action.editor_avanzado
+label: 'Elimina el rol editor avanzado al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor_avanzado

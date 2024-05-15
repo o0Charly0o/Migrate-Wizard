@@ -1,0 +1,9 @@
+uuid: 4a9f9645-5847-4e2e-adb4-7aa837502350
+langcode: es
+status: true
+dependencies: {  }
+id: editor_articulos
+label: 'editor articulos'
+weight: 5
+is_admin: null
+permissions: {  }

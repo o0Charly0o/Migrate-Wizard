@@ -1,0 +1,149 @@
+migrate_wizard_settings:
+  migration_group_name: testmigraciones
+  migration_url_files_prod: 'https://www.drupal.org/files/'
+  form_build_id: form-Pl_HXDv_pfwF-KcAnY0NBF4d6HvjM4M4rZkQpMvdSO4
+  form_token: dZ4PkW6zEBYFsS-kkY-BcUXxyRMgkgiSb0KrCNaw4Sc
+  form_id: migrate_wizard
+  op: 'Guardar configuración'
+user:
+  user:
+    picture:
+      type: image
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+      media_field: none
+    field_testimagen:
+      type: image
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+      media_field: none
+    languages:
+      default: es
+  build_migration_config: '1'
+  preserve_uid: '1'
+  import_path_alias: null
+  limit_import: ''
+  import_only_ids: ''
+  destiny_type: user
+  origin_type: user
+origin_user_roles:
+  roles:
+    3:
+      origin: administrator
+      destiny: administrator
+    1:
+      origin: 'anonymous user'
+      destiny: anonymous
+    2:
+      origin: 'authenticated user'
+      destiny: authenticated
+    4:
+      origin: editor
+      destiny: editor
+    6:
+      origin: 'editor articulos'
+      destiny: editor_articulos
+    5:
+      origin: 'editor avanzado'
+      destiny: editor_avanzado
+article:
+  article:
+    title:
+      type: text
+      destiny: title
+      destiny_type: string
+      bundle: ''
+      target_bundles: {  }
+    body:
+      type: text_with_summary
+      destiny: body
+      destiny_type: text_with_summary
+      bundle: ''
+      target_bundles: {  }
+    field_tags:
+      type: taxonomy_term_reference
+      destiny: field_tags
+      destiny_type: entity_reference
+      bundle: ''
+      target_bundles: {  }
+      dependencies:
+        tags: tags
+      migration_lookup:
+        - tags
+    field_image:
+      type: image
+      destiny: field_image
+      destiny_type: image
+      bundle: ''
+      target_bundles: {  }
+      media_field: none
+    field_archivo:
+      type: file
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+      media_field: none
+    field_booleano:
+      type: list_boolean
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_decimal:
+      type: number_decimal
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_float:
+      type: number_float
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    languages:
+      default: es
+      en: en
+  build_migration_config: '1'
+  import_users: null
+  source_type_date_field: ''
+  import_path_alias: null
+  limit_import: ''
+  import_only_ids: ''
+  destiny_type: node
+  origin_type: node
+tags:
+  tags:
+    name:
+      type: text
+      destiny: name
+      destiny_type: string
+      bundle: ''
+      target_bundles: {  }
+    description:
+      type: text_long
+      destiny: description
+      destiny_type: text_long
+      bundle: ''
+      target_bundles: {  }
+    languages:
+      default: es
+      en: en
+  build_migration_config: '1'
+  import_users: null
+  source_type_date_field: ''
+  i18n_mode: '1'
+  import_path_alias: null
+  limit_import: ''
+  import_only_ids: ''
+  destiny_type: taxonomy_term
+  origin_type: taxonomy_term
+origin_formats:
+  filtered_html: restricted_html
+  full_html: full_html
+  plain_text: basic_html

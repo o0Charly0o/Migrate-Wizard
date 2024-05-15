@@ -1,0 +1,9 @@
+uuid: 99a7f9be-36be-4c68-8b1a-58c532bc88b5
+langcode: es
+status: true
+dependencies: {  }
+id: editor_avanzado
+label: 'editor avanzado'
+weight: 6
+is_admin: null
+permissions: {  }
