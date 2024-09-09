@@ -1,0 +1,124 @@
+uuid: 26d504c4-88f4-402f-aa21-244d06173522
+langcode: es
+status: true
+dependencies: {  }
+id: article_drupal7
+id_origin: article
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: Artículo
+description: 'Use los <em>artículos</em> para contenido que tenga relevancia temporal como las noticias o las publicaciones en blogs.'
+source_type: sql
+module: migrate_wizard
+shared_configuration:
+  article:
+    title:
+      type: text
+      destiny: title
+      destiny_type: string
+      bundle: ''
+      target_bundles: {  }
+    body:
+      type: text_with_summary
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_tags:
+      type: taxonomy_term_reference
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+      dependencies:
+        tags: tags_drupal7
+      migration_lookup:
+        - tags_drupal7
+    field_image:
+      type: image
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_archivo:
+      type: file
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_booleano:
+      type: list_boolean
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_decimal:
+      type: number_decimal
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_float:
+      type: number_float
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_fc_test:
+      type: field_collection
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_paragraph_field:
+      type: paragraphs
+      destiny: field_paragraph
+      destiny_type: paragraph
+      bundle:
+        - paragraph_test
+      target_bundles: test
+    field_imagen2:
+      type: image
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_media:
+      type: image
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_mediafile:
+      type: file
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_audio:
+      type: file
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_video:
+      type: file
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    languages:
+      default: es
+      en: en
+  build_migration_config: '1'
+  import_users: null
+  source_type_date_field: ''
+  import_path_alias: null
+  limit_import: ''
+  import_only_ids: ''
+  destiny_type: node
+  origin_type: node
+  listmediafields: null
+  mw_database: drupal7

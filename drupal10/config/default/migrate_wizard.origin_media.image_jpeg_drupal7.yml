@@ -1,0 +1,17 @@
+uuid: 1b1cb859-a675-4d37-b628-c86b0cc01cfe
+langcode: es
+status: true
+dependencies: {  }
+id: image_jpeg_drupal7
+id_origin: image_jpeg
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: image_jpeg
+description: image_jpeg
+filemime: image_jpeg
+source_type: sql
+module: migrate_wizard
+shared_configuration:
+  destiny_type: media

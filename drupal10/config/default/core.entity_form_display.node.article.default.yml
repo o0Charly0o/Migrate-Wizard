@@ -5,13 +5,25 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_archivo
+    - field.field.node.article.field_archivomedia
+    - field.field.node.article.field_audio
+    - field.field.node.article.field_booleano
+    - field.field.node.article.field_decimal
+    - field.field.node.article.field_flotante
     - field.field.node.article.field_image
+    - field.field.node.article.field_imagemedia
+    - field.field.node.article.field_paragraph
     - field.field.node.article.field_tags
+    - field.field.node.article.field_video
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
+    - file
     - image
+    - media_library
+    - paragraphs
     - path
     - text
 _core:
@@ -43,6 +55,48 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_archivo:
+    type: file_generic
+    weight: 122
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_archivomedia:
+    type: media_library_widget
+    weight: 127
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_audio:
+    type: media_library_widget
+    weight: 128
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_booleano:
+    type: boolean_checkbox
+    weight: 124
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_decimal:
+    type: number
+    weight: 125
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_flotante:
+    type: number
+    weight: 126
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_image:
     type: image_image
     weight: 1
@@ -50,6 +104,31 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_imagemedia:
+    type: media_library_widget
+    weight: 123
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_paragraph:
+    type: paragraphs
+    weight: 121
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Parráfos
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
@@ -60,6 +139,13 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_video:
+    type: media_library_widget
+    weight: 129
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -102,6 +188,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

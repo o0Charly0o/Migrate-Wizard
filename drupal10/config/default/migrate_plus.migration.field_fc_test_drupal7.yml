@@ -1,0 +1,55 @@
+uuid: b766f158-5108-4e85-b9d0-ded345bfbc9e
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_wizard
+id: field_fc_test_drupal7
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - drupal7
+migration_group: drupal7
+label: field_fc_test
+source:
+  plugin: mw_d7_field_collection_item
+  constants:
+    langcode: null
+    file_destination: 'public://migrate/'
+    start_alias: /
+    status: '1'
+    default_langcode: es
+  key: migrate
+  mw_database: drupal7
+  bundle: field_fc_test
+  field_name: field_fc_test
+  name: field_fc_test
+  origin_type: field_collection_item
+  entity_type: field_collection_item
+process:
+  langcode:
+    -
+      plugin: skip_on_empty
+      source: language
+      method: row
+  type:
+    -
+      plugin: default_value
+      default_value: test
+  created: created
+  field_adsf:
+    -
+      plugin: skip_on_empty
+      source: field_fc_test_string
+      method: process
+    -
+      plugin: sub_process
+      process:
+        value: value
+        format: format
+destination:
+  plugin: 'mw_entity_reference_revisions:paragraph'
+migration_dependencies:
+  required: {  }

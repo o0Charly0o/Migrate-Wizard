@@ -1,0 +1,29 @@
+uuid: efce01a7-33fd-4e52-86e6-af87a0ff96fe
+langcode: es
+status: true
+dependencies: {  }
+id: application_pdf_drupal7
+id_origin: application_pdf
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: application_pdf
+description: application_pdf
+filemime: application_pdf
+source_type: sql
+module: migrate_wizard
+shared_configuration:
+  document:
+    languages:
+      default: es
+  build_migration_config: '1'
+  import_users: null
+  source_type_date_field: null
+  import_path_alias: null
+  limit_import: ''
+  import_only_ids: ''
+  destiny_type: media
+  origin_type: media
+  listmediafields: field_media_document
+  mw_database: drupal7

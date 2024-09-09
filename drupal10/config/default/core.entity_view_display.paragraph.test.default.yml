@@ -1,0 +1,33 @@
+uuid: d1efa770-7b64-4ea0-8555-3f0ab563f84f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.test.field_adsf
+    - field.field.paragraph.test.field_paragraph_campo_hijo
+    - paragraphs.paragraphs_type.test
+  module:
+    - entity_reference_revisions
+id: paragraph.test.default
+targetEntityType: paragraph
+bundle: test
+mode: default
+content:
+  field_adsf:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraph_campo_hijo:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

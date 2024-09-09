@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="php@5588348e-1d26-4f55-bf5e-843eaf5559af">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$/drupal10/web" remote-root="/var/www/html/web" />
+            </list>
+          </settings>
+        </remote-mappings>
+      </list>
+    </list>
+  </component>
+</project>

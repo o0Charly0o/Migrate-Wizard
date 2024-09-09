@@ -1,0 +1,18 @@
+uuid: 2092c7bf-76f2-48ba-b3e6-9d6de882ab3f
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_booleano
+field_name: field_booleano
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

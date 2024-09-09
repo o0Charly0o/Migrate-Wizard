@@ -42,6 +42,7 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  paragraphs_asymmetric_translation_widgets: 0
   path: 0
   path_alias: 0
   phpass: 0
@@ -51,12 +52,16 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   toolbar_menu: 0
   user: 0
   views_ui: 0
+  pathauto: 1
   content_translation: 10
+  externalauth: 10
   views: 10
+  paragraphs: 11
 theme:
   olivero: 0
   claro: 0

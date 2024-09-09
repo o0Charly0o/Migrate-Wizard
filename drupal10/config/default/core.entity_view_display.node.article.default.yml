@@ -6,12 +6,23 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_archivo
+    - field.field.node.article.field_archivomedia
+    - field.field.node.article.field_audio
+    - field.field.node.article.field_booleano
+    - field.field.node.article.field_decimal
+    - field.field.node.article.field_flotante
     - field.field.node.article.field_image
+    - field.field.node.article.field_imagemedia
+    - field.field.node.article.field_paragraph
     - field.field.node.article.field_tags
+    - field.field.node.article.field_video
     - image.style.wide
     - node.type.article
   module:
     - comment
+    - entity_reference_revisions
+    - file
     - image
     - text
     - user
@@ -38,6 +49,64 @@ content:
     third_party_settings: {  }
     weight: 110
     region: content
+  field_archivo:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_archivomedia:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_audio:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 118
+    region: content
+  field_booleano:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_decimal:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_flotante:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 116
+    region: content
   field_image:
     type: image
     label: hidden
@@ -49,6 +118,24 @@ content:
     third_party_settings: {  }
     weight: -1
     region: content
+  field_imagemedia:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 111
+    region: content
   field_tags:
     type: entity_reference_label
     label: above
@@ -56,6 +143,15 @@ content:
       link: true
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_video:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 119
     region: content
   links:
     settings: {  }

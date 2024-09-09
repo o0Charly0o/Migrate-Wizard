@@ -1,0 +1,42 @@
+uuid: d7d50c92-0b83-42c5-826f-b539ff206059
+langcode: es
+status: true
+dependencies: {  }
+id: tags_drupal7
+id_origin: tags
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: Etiquetas
+description: 'Utilice etiquetas para agrupar artículos sobre temas similares en categorías.'
+source_type: sql
+module: migrate_wizard
+shared_configuration:
+  tags:
+    name:
+      type: text
+      destiny: name
+      destiny_type: string
+      bundle: ''
+      target_bundles: {  }
+    description:
+      type: text_long
+      destiny: description
+      destiny_type: text_long
+      bundle: ''
+      target_bundles: {  }
+    languages:
+      default: es
+      en: en
+  build_migration_config: '1'
+  import_users: null
+  source_type_date_field: ''
+  i18n_mode: '1'
+  import_path_alias: null
+  limit_import: ''
+  import_only_ids: ''
+  destiny_type: taxonomy_term
+  origin_type: vocabulary
+  listmediafields: null
+  mw_database: drupal7

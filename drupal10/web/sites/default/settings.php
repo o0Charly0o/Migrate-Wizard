@@ -867,17 +867,29 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
 # }
 $settings['config_sync_directory'] = '/var/www/html/config/default';
 
-$databases['migrate']['default'] = [
-  'host' => 'ddev-drupal7-db',
-  'database' => 'db',
-  'username' => 'db',
-  'password' => 'db',
-  'prefix' => '',
-  'driver' => 'mysql',
-  'port' => 3306,
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'collation' => 'utf8mb4_general_ci',
-  'init_commands' => [
-    'group_concat_max_len' => 'SET SESSION group_concat_max_len = 5000',
-  ],
-];
+//$databases['migrate']['default'] = [
+//  'host' => 'ddev-drupal7-db',
+//  'database' => 'db',
+//  'username' => 'db',
+//  'password' => 'db',
+//  'prefix' => '',
+//  'driver' => 'mysql',
+//  'port' => 3306,
+//  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+//  'collation' => 'utf8mb4_general_ci',
+//  'init_commands' => [
+//    'group_concat_max_len' => 'SET SESSION group_concat_max_len = 5000',
+//  ],
+//];
+
+
+//$host = "db";
+//$port = 3306;
+//$driver = "mysql";
+//
+//$databases['migrate']['default2']['database'] = "exampledb2";
+//$databases['migrate']['default2']['username'] = "db";
+//$databases['migrate']['default2']['password'] = "db";
+//$databases['migrate']['default2']['host'] = $host;
+//$databases['migrate']['default2']['port'] = $port;
+//$databases['migrate']['default2']['driver'] = $driver;

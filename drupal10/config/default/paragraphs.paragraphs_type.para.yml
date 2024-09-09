@@ -1,0 +1,10 @@
+uuid: df1a6099-9085-4735-a696-bc07d5101875
+langcode: es
+status: true
+dependencies: {  }
+id: para
+label: 'paragraph hijo campo'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

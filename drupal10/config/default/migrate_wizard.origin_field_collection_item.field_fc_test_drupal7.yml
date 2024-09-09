@@ -1,0 +1,29 @@
+uuid: d9898da9-9cd8-4033-81a9-0a66e3423253
+langcode: es
+status: true
+dependencies: {  }
+id: field_fc_test_drupal7
+id_origin: field_fc_test
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: field_fc_test
+source_type: sql
+module: migrate_wizard
+shared_configuration:
+  test:
+    field_fc_test_string:
+      type: text
+      destiny: field_adsf
+      destiny_type: string
+      bundle: ''
+      target_bundles: {  }
+    languages:
+      default: es
+      en: en
+  build_migration_config: '1'
+  destiny_type: paragraph
+  origin_type: field_collection_item
+  listmediafields: null
+  mw_database: drupal7

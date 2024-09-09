@@ -1,0 +1,46 @@
+uuid: 2ec8fb62-0392-41c4-8eb8-93fa613aabf5
+langcode: es
+status: true
+dependencies: {  }
+id: page_drupal7
+id_origin: page
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: 'Página básica'
+description: "Utilice <em>páginas básicas</em> para el contenido estático, por ejemplo la página 'Sobre nosotros'."
+source_type: sql
+module: migrate_wizard
+shared_configuration:
+  tags:
+    title:
+      type: text
+      destiny: name
+      destiny_type: string
+      bundle: ''
+      target_bundles: {  }
+    body:
+      type: text_with_summary
+      destiny: description
+      destiny_type: text_long
+      bundle: ''
+      target_bundles: {  }
+    field_mediafile2:
+      type: file
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    languages:
+      default: es
+  build_migration_config: '1'
+  import_users: null
+  source_type_date_field: ''
+  import_path_alias: null
+  limit_import: ''
+  import_only_ids: ''
+  destiny_type: taxonomy_term
+  origin_type: node
+  listmediafields: null
+  mw_database: drupal7

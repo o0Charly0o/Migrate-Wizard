@@ -1,0 +1,17 @@
+uuid: 95b40e61-a2c5-4227-bdb5-36264c82011b
+langcode: es
+status: true
+dependencies: {  }
+id: application_zip_drupal7
+id_origin: application_zip
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: application_zip
+description: application_zip
+filemime: application_zip
+source_type: sql
+module: migrate_wizard
+shared_configuration:
+  destiny_type: media

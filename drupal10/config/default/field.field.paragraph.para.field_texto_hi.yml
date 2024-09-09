@@ -1,0 +1,19 @@
+uuid: c9863cd4-423c-4fe0-8bff-bcd647ef5943
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_texto_hi
+    - paragraphs.paragraphs_type.para
+id: paragraph.para.field_texto_hi
+field_name: field_texto_hi
+entity_type: paragraph
+bundle: para
+label: 'texto hijo campo'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

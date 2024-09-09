@@ -1,0 +1,17 @@
+uuid: 1afa39ff-8319-4696-867c-910ccebdaddc
+langcode: es
+status: true
+dependencies: {  }
+id: text_plain_drupal7
+id_origin: text_plain
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: text_plain
+description: text_plain
+filemime: text_plain
+source_type: sql
+module: migrate_wizard
+shared_configuration:
+  destiny_type: media

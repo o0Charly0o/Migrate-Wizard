@@ -1,9 +1,9 @@
-uuid: 4a9f9645-5847-4e2e-adb4-7aa837502350
+uuid: d19a3d7e-5172-4be8-9552-01a09ab959ee
 langcode: es
 status: true
 dependencies: {  }
 id: editor_articulos
 label: 'editor articulos'
-weight: 5
+weight: 7
 is_admin: null
 permissions: {  }

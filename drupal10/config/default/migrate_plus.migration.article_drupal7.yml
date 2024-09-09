@@ -1,0 +1,57 @@
+uuid: 000091c4-911d-416f-b3ee-7754d30bbf46
+langcode: null
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_wizard
+id: article_drupal7
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - drupal7
+migration_group: drupal7
+label: article
+source:
+  plugin: mw_d7_node
+  constants:
+    file_destination: 'public://migrate/'
+    start_alias: /
+    langcode: null
+    source_base_path: 'http://drupal7.ddev.site'
+  key: migrate
+  mw_database: drupal7
+  bundle: article
+  node_type: article
+  origin_type: node
+process:
+  type:
+    plugin: default_value
+    default_value: article
+  created: created
+  status: status
+  title:
+    -
+      plugin: skip_on_empty
+      source: title
+      method: row
+  field_paragraph:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_paragraph_field
+    -
+      plugin: migration_lookup
+      migration: paragraph_test_drupal7
+      no_stub: true
+    -
+      plugin: sub_process
+      process:
+        target_id: '0'
+        target_revision_id: '1'
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required:
+    - paragraph_test_drupal7

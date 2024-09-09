@@ -6,8 +6,17 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_archivo
+    - field.field.node.article.field_archivomedia
+    - field.field.node.article.field_audio
+    - field.field.node.article.field_booleano
+    - field.field.node.article.field_decimal
+    - field.field.node.article.field_flotante
     - field.field.node.article.field_image
+    - field.field.node.article.field_imagemedia
+    - field.field.node.article.field_paragraph
     - field.field.node.article.field_tags
+    - field.field.node.article.field_video
     - image.style.medium
     - node.type.article
   module:
@@ -53,4 +62,13 @@ content:
     region: content
 hidden:
   comment: true
+  field_archivo: true
+  field_archivomedia: true
+  field_audio: true
+  field_booleano: true
+  field_decimal: true
+  field_flotante: true
+  field_imagemedia: true
+  field_paragraph: true
+  field_video: true
   langcode: true

@@ -1,0 +1,10 @@
+uuid: f8a4aaa0-2e79-44b4-a900-8f9b97820d5b
+langcode: es
+status: true
+dependencies: {  }
+id: defaulttest
+label: defaulttest
+description: ''
+source_type: null
+module: null
+shared_configuration: null
