@@ -1,4 +1,4 @@
-uuid: b9eaeac1-7138-4aaf-9645-ec5edefbf5c8
+uuid: 9435d78e-045d-4757-9872-75d51dbea8b8
 langcode: es
 status: true
 dependencies: {  }
@@ -14,36 +14,10 @@ prefix: ''
 driver: mysql
 port: '3306'
 namespace: Drupal\Core\Database\Driver\mysql
-collation: ''
+collation: utf8mb4_general_ci
 url_files_prod: 'http://drupal7.ddev.site'
 use_env: null
 shared_configuration:
-  user_migration_config:
-    user:
-      picture:
-        type: image
-        destiny: none
-        destiny_type: ''
-        bundle: ''
-        target_bundles: {  }
-      field_testimagen:
-        type: image
-        destiny: none
-        destiny_type: ''
-        bundle: ''
-        target_bundles: {  }
-      languages:
-        default: es
-    build_migration_config: '1'
-    preserve_uid: null
-    import_cas: '1'
-    import_path_alias: null
-    limit_import: ''
-    import_only_ids: ''
-    destiny_type: user
-    origin_type: user
-    listmediafields: null
-    mw_database: drupal7
   user_roles:
     roles:
       3:
@@ -64,9 +38,31 @@ shared_configuration:
       5:
         origin: 'editor avanzado'
         destiny: editor_avanzado
-  migration_files:
-    preserve_fid: null
+  user_migration_config:
+    user:
+      picture:
+        type: image
+        destiny: none
+        destiny_type: ''
+        bundle: ''
+        target_bundles: {  }
+      field_testimagen:
+        type: image
+        destiny: none
+        destiny_type: ''
+        bundle: ''
+        target_bundles: {  }
+      languages:
+        default: es
     build_migration_config: '1'
+    preserve_uid: null
+    import_path_alias: null
+    limit_import: ''
+    import_only_ids: ''
+    destiny_type: user
+    origin_type: user
+    listmediafields: null
+    mw_database: drupal7
   origin_formats:
     filtered_html: full_html
     full_html: full_html

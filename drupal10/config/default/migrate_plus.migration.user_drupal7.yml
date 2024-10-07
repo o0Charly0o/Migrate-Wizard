@@ -1,4 +1,4 @@
-uuid: e3ee65c3-6ca7-493a-8e7f-2ba3274ee920
+uuid: d06a3b26-9e86-426e-81aa-5d624912495c
 langcode: null
 status: true
 dependencies:
@@ -21,7 +21,6 @@ source:
     langcode: null
   key: migrate
   mw_database: drupal7
-  import_cas: true
 process:
   name: name
   pass: pass

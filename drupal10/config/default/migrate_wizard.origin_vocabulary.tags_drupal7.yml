@@ -1,4 +1,4 @@
-uuid: d7d50c92-0b83-42c5-826f-b539ff206059
+uuid: 22f83058-1d8f-46ff-9d91-0f3d0f92558a
 langcode: es
 status: true
 dependencies: {  }
@@ -28,7 +28,6 @@ shared_configuration:
       target_bundles: {  }
     languages:
       default: es
-      en: en
   build_migration_config: '1'
   import_users: null
   source_type_date_field: ''

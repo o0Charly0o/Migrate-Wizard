@@ -1,4 +1,4 @@
-uuid: 000091c4-911d-416f-b3ee-7754d30bbf46
+uuid: 464f746b-5077-4f65-ba3d-18cc6215f478
 langcode: null
 status: true
 dependencies:
@@ -36,22 +36,94 @@ process:
       plugin: skip_on_empty
       source: title
       method: row
-  field_paragraph:
+  body:
     -
       plugin: skip_on_empty
+      source: body
       method: process
-      source: field_paragraph_field
-    -
-      plugin: migration_lookup
-      migration: paragraph_test_drupal7
-      no_stub: true
     -
       plugin: sub_process
+      method: process
       process:
-        target_id: '0'
-        target_revision_id: '1'
+        value: value
+        summary: summary
+        format:
+          plugin: static_map
+          source: format
+          map:
+            filtered_html: full_html
+            full_html: full_html
+            plain_text: full_html
+          default_value: full_html
+  field_tags:
+    -
+      plugin: skip_on_empty
+      source: field_tags
+      method: process
+    -
+      plugin: sub_process
+      method: process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: tid
+          migration:
+            - none
+          no_stub: true
+  pseudo_field_image:
+    -
+      plugin: skip_on_empty
+      source: field_image
+      method: process
+    -
+      plugin: sub_process
+      method: process
+      process:
+        bundle: bundle
+        field_name_destiny: ''
+        source_full_path:
+          -
+            plugin: mw_concat
+            delimiter: /
+            source:
+              - source_base_path
+              - filepath
+          -
+            plugin: urlencode
+        uri_dest:
+          plugin: mw_file_copy
+          source:
+            - '@source_full_path'
+            - uri
+        target_id:
+          plugin: mw_process_entity_file
+          source:
+            - '@source_full_path'
+            - '@uri_dest'
+            - filename
+            - filemime
+            - filesize
+            - status
+            - created
+            - changed
+            - uid
+        alt: alt
+        title: title
+  pseudo_field_image_destiny:
+    -
+      plugin: media_concat_data
+      source:
+        - '@pseudo_field_image'
+      method: process
+  field_image:
+    -
+      plugin: sub_process
+      source: '@pseudo_field_image_destiny'
+      method: process
+      process:
+        target_id: target_id
 destination:
   plugin: 'entity:node'
 migration_dependencies:
   required:
-    - paragraph_test_drupal7
+    - none

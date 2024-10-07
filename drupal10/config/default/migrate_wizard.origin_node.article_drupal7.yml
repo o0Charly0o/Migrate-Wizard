@@ -1,4 +1,4 @@
-uuid: 26d504c4-88f4-402f-aa21-244d06173522
+uuid: 7b7a78e1-2715-4b1a-a53a-af3b3c725691
 langcode: es
 status: true
 dependencies: {  }
@@ -22,24 +22,25 @@ shared_configuration:
       target_bundles: {  }
     body:
       type: text_with_summary
-      destiny: none
-      destiny_type: ''
+      destiny: body
+      destiny_type: text_with_summary
       bundle: ''
       target_bundles: {  }
     field_tags:
       type: taxonomy_term_reference
-      destiny: none
-      destiny_type: ''
+      destiny: field_tags
+      destiny_type: entity_reference
       bundle: ''
       target_bundles: {  }
       dependencies:
-        tags: tags_drupal7
+        tags: none
+      target_type: null
       migration_lookup:
-        - tags_drupal7
+        - none
     field_image:
       type: image
-      destiny: none
-      destiny_type: ''
+      destiny: field_image
+      destiny_type: image
       bundle: ''
       target_bundles: {  }
     field_archivo:
@@ -66,21 +67,8 @@ shared_configuration:
       destiny_type: ''
       bundle: ''
       target_bundles: {  }
-    field_fc_test:
-      type: field_collection
-      destiny: none
-      destiny_type: ''
-      bundle: ''
-      target_bundles: {  }
     field_paragraph_field:
       type: paragraphs
-      destiny: field_paragraph
-      destiny_type: paragraph
-      bundle:
-        - paragraph_test
-      target_bundles: test
-    field_imagen2:
-      type: image
       destiny: none
       destiny_type: ''
       bundle: ''
@@ -109,9 +97,36 @@ shared_configuration:
       destiny_type: ''
       bundle: ''
       target_bundles: {  }
+    field_paginabasica:
+      type: entityreference
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+      dependencies:
+        page: none
+      target_type: node
+      migration_lookup:
+        - none
+    field_testdaniel:
+      type: number_decimal
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_taxonomyreference:
+      type: entityreference
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+      dependencies:
+        tags: none
+      target_type: taxonomy_term
+      migration_lookup:
+        - none
     languages:
       default: es
-      en: en
   build_migration_config: '1'
   import_users: null
   source_type_date_field: ''

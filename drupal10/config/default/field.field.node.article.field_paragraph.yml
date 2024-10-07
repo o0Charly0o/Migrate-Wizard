@@ -15,7 +15,7 @@ bundle: article
 label: paragraph
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -25,6 +25,9 @@ settings:
       test: test
     negate: 0
     target_bundles_drag_drop:
+      para:
+        weight: 3
+        enabled: false
       test:
         weight: 2
         enabled: true

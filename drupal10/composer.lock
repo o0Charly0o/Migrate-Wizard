@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7634960be7cf59da223a91b614a1aac0",
+    "content-hash": "18297135e9ecd88d88c19fc390359ac1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1329,17 +1329,17 @@
         },
         {
             "name": "drupal/migrate_wizard",
-            "version": "2.0.9-alpha1",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/migrate_wizard.git",
-                "reference": "2.0.9-alpha1"
+                "reference": "2.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_wizard-2.0.9-alpha1.zip",
-                "reference": "2.0.9-alpha1",
-                "shasum": "ecef803500502e4b42f5c3257c51c3e38dea18ad"
+                "url": "https://ftp.drupal.org/files/projects/migrate_wizard-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "83586533128443cfba0513e6038ef216bfe627f4"
             },
             "require": {
                 "drupal/core": "^10 || ^11",
@@ -1349,8 +1349,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.9-alpha1",
-                    "datestamp": "1725559136",
+                    "version": "2.0.3",
+                    "datestamp": "1728240285",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -13262,9 +13262,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "drupal/migrate_wizard": 15
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

@@ -5,8 +5,3 @@ migrate_wizard_settings:
       database: db
       username: db
       password: db
-    sdfg:
-      host: sdfg
-      database: sdfg
-      username: sdfg
-      password: sdfgsg
