@@ -118,6 +118,7 @@ docker-compose.override.yml
 **/*.rar
 **/*.mysql
 
+!db/*.zip
 # Do not ignore distributed database files.
 !config/db/*.gz
 
