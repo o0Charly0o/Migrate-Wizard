@@ -1,0 +1,10 @@
+uuid: 5334146e-9c94-4d59-a12b-581111a85ab6
+langcode: es
+status: true
+dependencies: {  }
+id: paragraph_hijo
+label: 'Paragraph hijo'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,34 @@
+uuid: f6ebd0b5-5a24-4dca-b972-4a90c3e657c1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_hijo_campo
+    - paragraphs.paragraphs_type.paragraph_hijo
+    - paragraphs.paragraphs_type.paragraph_padre
+  module:
+    - entity_reference_revisions
+id: paragraph.paragraph_padre.field_paragraph_hijo_campo
+field_name: field_paragraph_hijo_campo
+entity_type: paragraph
+bundle: paragraph_padre
+label: 'Paragraph hijo campo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      paragraph_hijo: paragraph_hijo
+    negate: 0
+    target_bundles_drag_drop:
+      paragraph_hijo:
+        weight: 3
+        enabled: true
+      paragraph_padre:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

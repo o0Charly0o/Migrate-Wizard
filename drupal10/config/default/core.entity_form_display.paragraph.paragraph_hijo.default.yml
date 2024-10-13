@@ -1,0 +1,23 @@
+uuid: 5bc923ae-fe29-4efd-b2fc-868765f3d7ef
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_hijo.field_texto_hijo_campo
+    - paragraphs.paragraphs_type.paragraph_hijo
+id: paragraph.paragraph_hijo.default
+targetEntityType: paragraph
+bundle: paragraph_hijo
+mode: default
+content:
+  field_texto_hijo_campo:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

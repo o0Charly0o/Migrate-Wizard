@@ -1,0 +1,24 @@
+uuid: 6b84faeb-0db1-4436-8c4a-f2a9b54e2ea6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_padre.field_paragraph_hijo_campo
+    - paragraphs.paragraphs_type.paragraph_padre
+  module:
+    - entity_reference_revisions
+id: paragraph.paragraph_padre.default
+targetEntityType: paragraph
+bundle: paragraph_padre
+mode: default
+content:
+  field_paragraph_hijo_campo:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

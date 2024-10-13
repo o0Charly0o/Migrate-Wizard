@@ -1,0 +1,166 @@
+{
+  "name": "jccm/drupal-project",
+  "description": "Project template for Drupal projects with a relocated document root",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "drupal/dropzonejs": "dev-8.x-2.x-3479830",
+    "drupal/menu_item_extras": "^3.1",
+    "drupal/simple_media_bulk_upload": "^2.0",
+    "drupal/slick_entityreference": "^3.0",
+    "drupal/svg_image": "^3.1",
+    "wikimedia/composer-merge-plugin": "dev-master"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "discard-changes": true,
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/installers": true,
+      "wikimedia/composer-merge-plugin": true,
+      "cweagans/composer-patches": true,
+      "drupal/core-composer-scaffold": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "phpro/grumphp": true,
+      "metadrop/scripthor": true,
+      "oomphinc/composer-installers-extender": true,
+      "drupal/console-extend-plugin": true,
+      "phpstan/extension-installer": true,
+      "php-http/discovery": true
+    }
+  },
+  "autoload": {
+    "classmap": [
+      "toolbox/templates/drupal/scripts/composer/ScriptHandler.php"
+    ],
+    "files": [
+      "load.environment.php"
+    ]
+  },
+  "scripts": {
+    "pre-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "pre-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "post-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+      "./toolbox/scripts/syncro-jccm-modules.sh"
+    ],
+    "post-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+      "./toolbox/scripts/syncro-jccm-modules.sh"
+    ],
+    "post-drupal-scaffold-cmd": [
+      "./toolbox/scripts/generate-salt.sh"
+    ],
+    "install-drupal": [
+      "./toolbox/scripts/generate-salt.sh"
+    ]
+  },
+  "extra": {
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "web/"
+      },
+      "file-mapping": {
+        "[web-root]/robots.txt": false,
+        "[project-root]/.editorconfig": false
+      }
+    },
+    "merge-plugin": {
+      "include": [
+        "/composer-base.json",
+        "/var/www/html/composer-jccm-base.json"
+      ],
+      "recurse": true,
+      "replace": false,
+      "ignore-duplicates": false,
+      "merge-dev": true,
+      "merge-extra": true,
+      "merge-extra-deep": true,
+      "merge-scripts": true
+    },
+    "composer-exit-on-patch-failure": true,
+    "enable-patching": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "patches": {
+      "drupal/core": {
+        "Some oEmbed videos do not maintain aspect ratio": "https://www.drupal.org/files/issues/2023-08-08/3060968-65.patch",
+        "Views file name suggestions often missing from Twig debugging": "https://www.drupal.org/files/issues/views-template-suggestions-2839945-2.patch",
+        "Make exposed filter values available as tokens for text areas": "https://www.drupal.org/files/issues/2022-10-30/2761273-50.patch",
+        "Create a theme suggestion for taxonomy terms by view mode": "https://www.drupal.org/files/issues/core-theme-suggestion-for-taxonomy-view-modes-2767243-14.patch",
+        "Unsaved changes message incorrectly appears on layout builder": "https://git.drupalcode.org/project/drupal/-/merge_requests/9332.patch",
+        "Sourceless migration plugins are broken": "https://www.drupal.org/files/issues/2021-11-09/2797421_16.patch",
+        "Fix views transform to lower options": "./patches/core/views/fix-views-transform-to-lower-options.patch",
+        "Log an error message when library definitions have a license with no URL defined":  "https://www.drupal.org/files/issues/2023-10-07/fix-license-missing-url.patch"
+      },
+      "drupal/domain": {
+        "variables type on DomainAccessCurrentAllFilter": "./patches/domain/DomainAccessCurrentAllFilter.patch"
+      },
+      "drupal/simplenews": {
+        "Add an option to send HTML format opt-in / subscribe mails": "https://www.drupal.org/files/issues/2023-01-10/simplenews_3003811_subscribe_mail_html.patch"
+      },
+      "drupal/htools": {
+        "error drupal_get_path on htools_theme_registry_alter": "https://git.drupalcode.org/project/htools/-/merge_requests/22.patch"
+      },
+      "drupal/add_to_head": {
+        "Add to head footer bad render array": "https://www.drupal.org/files/issues/2021-09-01/add_to_head-footer_bad_render_array.patch"
+      },
+      "drupal/tablefield": {
+        "Add quick 'Add Column' button": "https://www.drupal.org/files/issues/2020-09-04/3169198-add-add-column-button-2.patch",
+        "Sort options would be wonderful": "https://www.drupal.org/files/issues/2021-05-27/tablefield-sortable-d8-1491584-17.patch"
+      },
+      "drupal/back_to_top": {
+        "Add options to configure time and effect in the setting form": "https://www.drupal.org/files/issues/2023-03-08/back-to-top-3254520-23.patch"
+      },
+      "drupal/shs": {
+        "- Select a value - appears at bottom of lists": "https://git.drupalcode.org/project/shs/-/merge_requests/4.diff",
+        "Labels no longer visible": "https://www.drupal.org/files/issues/2021-07-22/remove-visually-hidden-for-webform-shs-3224909.patch"
+      }
+    },
+    "installer-types": [
+      "npm-asset",
+      "bower-asset"
+    ],
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/slick": [
+        "npm-asset/slick-carousel"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library",
+        "type:npm-asset",
+        "type:bower-asset",
+        "vendor:ckeditor-plugin"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/Commands/contrib/{$name}": [
+        "type:drupal-drush"
+      ],
+      "web/modules/custom/{$name}": [
+        "type:drupal-custom-module"
+      ],
+      "web/themes/custom/{$name}": [
+        "type:drupal-custom-theme"
+      ]
+    }
+  }
+}

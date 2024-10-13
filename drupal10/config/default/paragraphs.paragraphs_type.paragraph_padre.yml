@@ -1,0 +1,10 @@
+uuid: 8241c5d4-1dae-4d12-819e-366fd673079d
+langcode: es
+status: true
+dependencies: {  }
+id: paragraph_padre
+label: 'Paragraph padre'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

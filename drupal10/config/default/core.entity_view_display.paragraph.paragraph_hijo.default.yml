@@ -1,0 +1,21 @@
+uuid: 172f7dda-428a-4bc1-8d7e-c47925a93336
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_hijo.field_texto_hijo_campo
+    - paragraphs.paragraphs_type.paragraph_hijo
+id: paragraph.paragraph_hijo.default
+targetEntityType: paragraph
+bundle: paragraph_hijo
+mode: default
+content:
+  field_texto_hijo_campo:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

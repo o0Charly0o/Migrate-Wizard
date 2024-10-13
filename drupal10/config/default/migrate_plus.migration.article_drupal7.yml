@@ -68,7 +68,7 @@ process:
           plugin: migration_lookup
           source: tid
           migration:
-            - none
+            - tags_drupal7
           no_stub: true
   pseudo_field_image:
     -
@@ -122,8 +122,138 @@ process:
       method: process
       process:
         target_id: target_id
+  pseudo_field_media:
+    -
+      plugin: skip_on_empty
+      source: field_media
+      method: process
+    -
+      plugin: sub_process
+      method: process
+      process:
+        bundle: bundle
+        field_name_destiny: field_media_document
+        source_full_path:
+          -
+            plugin: mw_concat
+            delimiter: /
+            source:
+              - source_base_path
+              - filepath
+          -
+            plugin: urlencode
+        uri_dest:
+          plugin: mw_file_copy
+          source:
+            - '@source_full_path'
+            - uri
+        fid:
+          plugin: mw_process_entity_file
+          source:
+            - '@source_full_path'
+            - '@uri_dest'
+            - filename
+            - filemime
+            - filesize
+            - status
+            - created
+            - changed
+            - uid
+        target_id:
+          plugin: mw_process_entity_media
+        alt: alt
+        title: title
+  pseudo_field_mediafile:
+    -
+      plugin: skip_on_empty
+      source: field_mediafile
+      method: process
+    -
+      plugin: sub_process
+      method: process
+      process:
+        bundle: bundle
+        field_name_destiny: field_media_document
+        source_full_path:
+          -
+            plugin: mw_concat
+            delimiter: /
+            source:
+              - source_base_path
+              - filepath
+          -
+            plugin: urlencode
+        uri_dest:
+          plugin: mw_file_copy
+          source:
+            - '@source_full_path'
+            - uri
+        fid:
+          plugin: mw_process_entity_file
+          source:
+            - '@source_full_path'
+            - '@uri_dest'
+            - filename
+            - filemime
+            - filesize
+            - status
+            - created
+            - changed
+            - uid
+        target_id:
+          plugin: mw_process_entity_media
+        alt: alt
+        title: title
+  pseudo_field_archivomedia_destiny:
+    -
+      plugin: media_concat_data
+      source:
+        - '@pseudo_field_media'
+        - '@pseudo_field_mediafile'
+      method: process
+  field_archivomedia:
+    -
+      plugin: sub_process
+      source: '@pseudo_field_archivomedia_destiny'
+      method: process
+      process:
+        target_id: target_id
+  pseudo_field_paragraph_campo_tc:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_paragraph_campo_tc
+    -
+      plugin: migration_lookup
+      migration: paragraph_padre_drupal7
+      no_stub: true
+  pseudo_field_field_collection_padre:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_field_collection_padre
+    -
+      plugin: migration_lookup
+      migration:
+        - field_field_collection_padre_drupal7
+      no_stub: true
+  pseudo_field_paragraph_destiny:
+    -
+      plugin: media_concat_data
+      source:
+        - '@pseudo_field_paragraph_campo_tc'
+        - '@pseudo_field_field_collection_padre'
+  field_paragraph:
+    -
+      plugin: sub_process
+      source: '@pseudo_field_paragraph_destiny'
+      process:
+        target_id: '0'
+        target_revision_id: '1'
 destination:
   plugin: 'entity:node'
 migration_dependencies:
   required:
-    - none
+    - tags_drupal7
+    - paragraph_padre_drupal7
+    - field_field_collection_padre_drupal7

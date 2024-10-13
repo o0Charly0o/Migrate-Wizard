@@ -6,9 +6,36 @@
       <sourceFolder url="file://$MODULE_DIR$/drupal7/web/misc/brumann/polyfill-unserialize/tests" isTestSource="true" packagePrefix="Tests\Brumann\Polyfill\" />
       <sourceFolder url="file://$MODULE_DIR$/drupal7/web/misc/typo3/phar-stream-wrapper/src" isTestSource="false" packagePrefix="TYPO3\PharStreamWrapper\" />
       <sourceFolder url="file://$MODULE_DIR$/drupal7/web/misc/typo3/phar-stream-wrapper/tests" isTestSource="true" packagePrefix="TYPO3\PharStreamWrapper\Tests\" />
-      <sourceFolder url="file://$MODULE_DIR$/drupal7/web/misc/typo3/phar-stream-wrapper/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Annotation/" isTestSource="false" packagePrefix="Drupal\Component\Annotation\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Assertion/" isTestSource="false" packagePrefix="Drupal\Component\Assertion\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/ClassFinder/" isTestSource="false" packagePrefix="Drupal\Component\ClassFinder\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Datetime/" isTestSource="false" packagePrefix="Drupal\Component\Datetime\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/DependencyInjection/" isTestSource="false" packagePrefix="Drupal\Component\DependencyInjection\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Diff/" isTestSource="false" packagePrefix="Drupal\Component\Diff\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Discovery/" isTestSource="false" packagePrefix="Drupal\Component\Discovery\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/EventDispatcher/" isTestSource="false" packagePrefix="Drupal\Component\EventDispatcher\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/FileCache/" isTestSource="false" packagePrefix="Drupal\Component\FileCache\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/FileSecurity/" isTestSource="false" packagePrefix="Drupal\Component\FileSecurity\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/FileSystem/" isTestSource="false" packagePrefix="Drupal\Component\FileSystem\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/FrontMatter/" isTestSource="false" packagePrefix="Drupal\Component\FrontMatter\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Gettext/" isTestSource="false" packagePrefix="Drupal\Component\Gettext\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Graph/" isTestSource="false" packagePrefix="Drupal\Component\Graph\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/HttpFoundation/" isTestSource="false" packagePrefix="Drupal\Component\HttpFoundation\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/PhpStorage/" isTestSource="false" packagePrefix="Drupal\Component\PhpStorage\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Plugin/" isTestSource="false" packagePrefix="Drupal\Component\Plugin\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/ProxyBuilder/" isTestSource="false" packagePrefix="Drupal\Component\ProxyBuilder\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Render/" isTestSource="false" packagePrefix="Drupal\Component\Render\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Serialization/" isTestSource="false" packagePrefix="Drupal\Component\Serialization\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Transliteration/" isTestSource="false" packagePrefix="Drupal\Component\Transliteration\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Utility/" isTestSource="false" packagePrefix="Drupal\Component\Utility\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Uuid/" isTestSource="false" packagePrefix="Drupal\Component\Uuid\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Version/" isTestSource="false" packagePrefix="Drupal\Component\Version\" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/composer-plugin-implements-scaffold-events/src" isTestSource="false" packagePrefix="Drupal\Tests\fixture\Composer\Plugin\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/drupal10/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/drupal10/vendor/chi-teck/drupal-code-generator" />
       <excludeFolder url="file://$MODULE_DIR$/drupal10/vendor/composer" />
@@ -93,7 +120,6 @@
       <excludeFolder url="file://$MODULE_DIR$/drupal7/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/drupal7/vendor/consolidation/annotated-command" />
       <excludeFolder url="file://$MODULE_DIR$/drupal7/vendor/consolidation/output-formatters" />
-      <excludeFolder url="file://$MODULE_DIR$/drupal7/vendor/cweagans/composer-patches" />
       <excludeFolder url="file://$MODULE_DIR$/drupal7/vendor/dflydev/dot-access-data" />
       <excludeFolder url="file://$MODULE_DIR$/drupal7/vendor/drupal-composer/preserve-paths" />
       <excludeFolder url="file://$MODULE_DIR$/drupal7/vendor/drush/drush" />
@@ -194,6 +220,7 @@
       <excludeFolder url="file://$MODULE_DIR$/drupal10/vendor/symfony/polyfill-php82" />
       <excludeFolder url="file://$MODULE_DIR$/drupal10/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/drupal10/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/drupal7/vendor/cweagans/composer-patches" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

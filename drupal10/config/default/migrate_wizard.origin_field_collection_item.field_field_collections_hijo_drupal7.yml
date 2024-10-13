@@ -1,0 +1,28 @@
+uuid: 900d4ed0-37b0-4b59-9471-40e5597a54c5
+langcode: es
+status: true
+dependencies: {  }
+id: field_field_collections_hijo_drupal7
+id_origin: field_field_collections_hijo
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: field_field_collections_hijo
+source_type: sql
+module: migrate_wizard
+shared_configuration:
+  paragraph_hijo:
+    field_texto_hijo_field_collectio:
+      type: text
+      destiny: field_texto_hijo_campo
+      destiny_type: string
+      bundle: ''
+      target_bundles: {  }
+    languages:
+      default: es
+  build_migration_config: '1'
+  destiny_type: paragraph
+  origin_type: field_collection_item
+  listmediafields: null
+  mw_database: drupal7

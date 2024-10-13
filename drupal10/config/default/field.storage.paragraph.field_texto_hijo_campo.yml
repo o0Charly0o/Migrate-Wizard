@@ -1,0 +1,21 @@
+uuid: c8164339-b6f4-4c4f-be64-5cb9024556e5
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_texto_hijo_campo
+field_name: field_texto_hijo_campo
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
