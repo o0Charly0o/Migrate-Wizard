@@ -11,10 +11,13 @@ dependencies:
     - field.field.node.article.field_audio
     - field.field.node.article.field_booleano
     - field.field.node.article.field_decimal
+    - field.field.node.article.field_email
+    - field.field.node.article.field_fecha
     - field.field.node.article.field_flotante
     - field.field.node.article.field_image
     - field.field.node.article.field_imagemedia
     - field.field.node.article.field_paragraph
+    - field.field.node.article.field_rango_fechas
     - field.field.node.article.field_tags
     - field.field.node.article.field_video
     - image.style.medium
@@ -67,8 +70,11 @@ hidden:
   field_audio: true
   field_booleano: true
   field_decimal: true
+  field_email: true
+  field_fecha: true
   field_flotante: true
   field_imagemedia: true
   field_paragraph: true
+  field_rango_fechas: true
   field_video: true
   langcode: true

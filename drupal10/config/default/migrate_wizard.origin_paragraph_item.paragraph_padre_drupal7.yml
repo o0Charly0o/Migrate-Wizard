@@ -1,4 +1,4 @@
-uuid: 0f267d4d-8b53-4ed0-90e6-f4a9ee60c720
+uuid: 1898f5b1-a374-444c-9e2a-ef139c9d722a
 langcode: es
 status: true
 dependencies: {  }
@@ -11,19 +11,4 @@ target: default
 label: field_paragraph_campo_tc
 source_type: sql
 module: migrate_wizard
-shared_configuration:
-  paragraph_padre:
-    field_paragraph_hijo_campo:
-      type: paragraphs
-      destiny: field_paragraph_hijo_campo
-      destiny_type: paragraph
-      bundle:
-        - paragraph_hijo
-      target_bundles: paragraph_hijo
-    languages:
-      default: es
-  build_migration_config: '1'
-  destiny_type: paragraph
-  origin_type: paragraph_item
-  listmediafields: null
-  mw_database: drupal7
+shared_configuration: 0

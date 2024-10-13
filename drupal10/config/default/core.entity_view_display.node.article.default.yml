@@ -11,16 +11,21 @@ dependencies:
     - field.field.node.article.field_audio
     - field.field.node.article.field_booleano
     - field.field.node.article.field_decimal
+    - field.field.node.article.field_email
+    - field.field.node.article.field_fecha
     - field.field.node.article.field_flotante
     - field.field.node.article.field_image
     - field.field.node.article.field_imagemedia
     - field.field.node.article.field_paragraph
+    - field.field.node.article.field_rango_fechas
     - field.field.node.article.field_tags
     - field.field.node.article.field_video
     - image.style.wide
     - node.type.article
   module:
     - comment
+    - datetime
+    - datetime_range
     - entity_reference_revisions
     - file
     - image
@@ -96,6 +101,22 @@ content:
     third_party_settings: {  }
     weight: 115
     region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  field_fecha:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 121
+    region: content
   field_flotante:
     type: number_decimal
     label: above
@@ -129,12 +150,22 @@ content:
     region: content
   field_paragraph:
     type: entity_reference_revisions_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     weight: 111
+    region: content
+  field_rango_fechas:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 122
     region: content
   field_tags:
     type: entity_reference_label

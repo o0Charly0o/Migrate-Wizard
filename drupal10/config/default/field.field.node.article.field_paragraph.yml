@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_paragraph
     - node.type.article
-    - paragraphs.paragraphs_type.test
+    - paragraphs.paragraphs_type.paragraph_padre
   module:
     - entity_reference_revisions
 id: node.article.field_paragraph
@@ -22,13 +22,13 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      test: test
+      paragraph_padre: paragraph_padre
     negate: 0
     target_bundles_drag_drop:
-      para:
+      paragraph_hijo:
         weight: 3
         enabled: false
-      test:
-        weight: 2
+      paragraph_padre:
+        weight: 4
         enabled: true
 field_type: entity_reference_revisions

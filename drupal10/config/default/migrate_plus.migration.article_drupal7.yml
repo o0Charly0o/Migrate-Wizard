@@ -1,4 +1,4 @@
-uuid: 464f746b-5077-4f65-ba3d-18cc6215f478
+uuid: 94c68fc5-18f1-4750-b7ae-030ba9625e30
 langcode: null
 status: true
 dependencies:
@@ -36,224 +36,54 @@ process:
       plugin: skip_on_empty
       source: title
       method: row
-  body:
+  pseudo_field_email:
     -
       plugin: skip_on_empty
-      source: body
+      source: field_email
       method: process
+  pseudo_field_email_destiny:
     -
-      plugin: sub_process
-      method: process
-      process:
-        value: value
-        summary: summary
-        format:
-          plugin: static_map
-          source: format
-          map:
-            filtered_html: full_html
-            full_html: full_html
-            plain_text: full_html
-          default_value: full_html
-  field_tags:
-    -
-      plugin: skip_on_empty
-      source: field_tags
-      method: process
-    -
-      plugin: sub_process
-      method: process
-      process:
-        target_id:
-          plugin: migration_lookup
-          source: tid
-          migration:
-            - tags_drupal7
-          no_stub: true
-  pseudo_field_image:
-    -
-      plugin: skip_on_empty
-      source: field_image
-      method: process
-    -
-      plugin: sub_process
-      method: process
-      process:
-        bundle: bundle
-        field_name_destiny: ''
-        source_full_path:
-          -
-            plugin: mw_concat
-            delimiter: /
-            source:
-              - source_base_path
-              - filepath
-          -
-            plugin: urlencode
-        uri_dest:
-          plugin: mw_file_copy
-          source:
-            - '@source_full_path'
-            - uri
-        target_id:
-          plugin: mw_process_entity_file
-          source:
-            - '@source_full_path'
-            - '@uri_dest'
-            - filename
-            - filemime
-            - filesize
-            - status
-            - created
-            - changed
-            - uid
-        alt: alt
-        title: title
-  pseudo_field_image_destiny:
-    -
-      plugin: media_concat_data
+      plugin: concat_data
       source:
-        - '@pseudo_field_image'
-      method: process
-  field_image:
+        - '@pseudo_field_email'
+  field_email:
     -
       plugin: sub_process
-      source: '@pseudo_field_image_destiny'
-      method: process
+      source: '@pseudo_field_email_destiny'
       process:
-        target_id: target_id
-  pseudo_field_media:
+        value: email
+  pseudo_field_date:
     -
       plugin: skip_on_empty
-      source: field_media
+      source: field_date
       method: process
-    -
-      plugin: sub_process
-      method: process
-      process:
-        bundle: bundle
-        field_name_destiny: field_media_document
-        source_full_path:
-          -
-            plugin: mw_concat
-            delimiter: /
-            source:
-              - source_base_path
-              - filepath
-          -
-            plugin: urlencode
-        uri_dest:
-          plugin: mw_file_copy
-          source:
-            - '@source_full_path'
-            - uri
-        fid:
-          plugin: mw_process_entity_file
-          source:
-            - '@source_full_path'
-            - '@uri_dest'
-            - filename
-            - filemime
-            - filesize
-            - status
-            - created
-            - changed
-            - uid
-        target_id:
-          plugin: mw_process_entity_media
-        alt: alt
-        title: title
-  pseudo_field_mediafile:
+  pseudo_field_date_2:
     -
       plugin: skip_on_empty
-      source: field_mediafile
+      source: field_date_2
       method: process
+  pseudo_field_rango_fechas_destiny:
     -
-      plugin: sub_process
-      method: process
-      process:
-        bundle: bundle
-        field_name_destiny: field_media_document
-        source_full_path:
-          -
-            plugin: mw_concat
-            delimiter: /
-            source:
-              - source_base_path
-              - filepath
-          -
-            plugin: urlencode
-        uri_dest:
-          plugin: mw_file_copy
-          source:
-            - '@source_full_path'
-            - uri
-        fid:
-          plugin: mw_process_entity_file
-          source:
-            - '@source_full_path'
-            - '@uri_dest'
-            - filename
-            - filemime
-            - filesize
-            - status
-            - created
-            - changed
-            - uid
-        target_id:
-          plugin: mw_process_entity_media
-        alt: alt
-        title: title
-  pseudo_field_archivomedia_destiny:
-    -
-      plugin: media_concat_data
+      plugin: concat_data
       source:
-        - '@pseudo_field_media'
-        - '@pseudo_field_mediafile'
-      method: process
-  field_archivomedia:
+        - '@pseudo_field_date'
+        - '@pseudo_field_date_2'
+  field_rango_fechas:
     -
       plugin: sub_process
-      source: '@pseudo_field_archivomedia_destiny'
-      method: process
+      source: '@pseudo_field_rango_fechas_destiny'
       process:
-        target_id: target_id
-  pseudo_field_paragraph_campo_tc:
-    -
-      plugin: skip_on_empty
-      method: process
-      source: field_paragraph_campo_tc
-    -
-      plugin: migration_lookup
-      migration: paragraph_padre_drupal7
-      no_stub: true
-  pseudo_field_field_collection_padre:
-    -
-      plugin: skip_on_empty
-      method: process
-      source: field_field_collection_padre
-    -
-      plugin: migration_lookup
-      migration:
-        - field_field_collection_padre_drupal7
-      no_stub: true
-  pseudo_field_paragraph_destiny:
-    -
-      plugin: media_concat_data
-      source:
-        - '@pseudo_field_paragraph_campo_tc'
-        - '@pseudo_field_field_collection_padre'
-  field_paragraph:
-    -
-      plugin: sub_process
-      source: '@pseudo_field_paragraph_destiny'
-      process:
-        target_id: '0'
-        target_revision_id: '1'
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y-m-d\TH:i:s'
+          source: value
+        end_value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y-m-d\TH:i:s'
+          source: value2
 destination:
   plugin: 'entity:node'
 migration_dependencies:
-  required:
-    - tags_drupal7
-    - paragraph_padre_drupal7
-    - field_field_collection_padre_drupal7
+  required: {  }

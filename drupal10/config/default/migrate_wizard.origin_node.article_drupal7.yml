@@ -1,4 +1,4 @@
-uuid: 7b7a78e1-2715-4b1a-a53a-af3b3c725691
+uuid: db6a2c27-fe7c-4669-8c1c-b14f02758fa9
 langcode: es
 status: true
 dependencies: {  }
@@ -22,14 +22,14 @@ shared_configuration:
       target_bundles: {  }
     body:
       type: text_with_summary
-      destiny: body
-      destiny_type: text_with_summary
+      destiny: none
+      destiny_type: ''
       bundle: ''
       target_bundles: {  }
     field_tags:
       type: taxonomy_term_reference
-      destiny: field_tags
-      destiny_type: entity_reference
+      destiny: none
+      destiny_type: ''
       bundle: ''
       target_bundles: {  }
       dependencies:
@@ -39,8 +39,8 @@ shared_configuration:
         - none
     field_image:
       type: image
-      destiny: field_image
-      destiny_type: image
+      destiny: none
+      destiny_type: ''
       bundle: ''
       target_bundles: {  }
     field_archivo:
@@ -63,12 +63,6 @@ shared_configuration:
       target_bundles: {  }
     field_float:
       type: number_float
-      destiny: none
-      destiny_type: ''
-      bundle: ''
-      target_bundles: {  }
-    field_paragraph_field:
-      type: paragraphs
       destiny: none
       destiny_type: ''
       bundle: ''
@@ -108,12 +102,6 @@ shared_configuration:
       target_type: node
       migration_lookup:
         - none
-    field_testdaniel:
-      type: number_decimal
-      destiny: none
-      destiny_type: ''
-      bundle: ''
-      target_bundles: {  }
     field_taxonomyreference:
       type: entityreference
       destiny: none
@@ -125,6 +113,38 @@ shared_configuration:
       target_type: taxonomy_term
       migration_lookup:
         - none
+    field_paragraph_campo_tc:
+      type: paragraphs
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_field_collection_padre:
+      type: field_collection
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_email:
+      type: email
+      destiny: field_email
+      destiny_type: email
+      bundle: ''
+      target_bundles: {  }
+    field_date:
+      type: daterange
+      destiny: field_rango_fechas
+      destiny_type: daterange
+      bundle: ''
+      target_bundles: {  }
+      format: 'Y-m-d\TH:i:s'
+    field_date_2:
+      type: daterange
+      destiny: field_rango_fechas
+      destiny_type: daterange
+      bundle: ''
+      target_bundles: {  }
+      format: 'Y-m-d\TH:i:s'
     languages:
       default: es
   build_migration_config: '1'
