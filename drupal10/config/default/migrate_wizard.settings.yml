@@ -5,3 +5,8 @@ migrate_wizard_settings:
       database: db
       username: db
       password: db
+    drupal72:
+      host: db
+      database: drupal72
+      username: db
+      password: db

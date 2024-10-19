@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/drupal10/web/modules/contrib/migrate_wizard" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/drupal7/vendor/wikimedia/composer-merge-plugin" vcs="Git" />
   </component>
 </project>

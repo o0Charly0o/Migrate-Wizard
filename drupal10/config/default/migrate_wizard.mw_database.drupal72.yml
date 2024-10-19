@@ -1,0 +1,20 @@
+uuid: 57c3e937-8a06-4e0e-88fd-96b6e8cd8ab1
+langcode: es
+status: true
+dependencies: {  }
+id: drupal72
+key: migrate
+migration_group: drupal72
+target: default
+host: db
+database: drupal72
+username: db
+password: db
+prefix: ''
+driver: mysql
+port: '3306'
+namespace: Drupal\Core\Database\Driver\mysql
+collation: utf8mb4_general_ci
+url_files_prod: ''
+use_env: null
+shared_configuration: null

@@ -22,22 +22,22 @@ shared_configuration:
     roles:
       3:
         origin: administrator
-        destiny: administrator
+        destiny: none
       1:
         origin: 'anonymous user'
-        destiny: anonymous
+        destiny: none
       2:
         origin: 'authenticated user'
-        destiny: authenticated
+        destiny: none
       4:
         origin: editor
-        destiny: editor
+        destiny: none
       6:
         origin: 'editor articulos'
-        destiny: editor_articulos
+        destiny: none
       5:
         origin: 'editor avanzado'
-        destiny: editor_avanzado
+        destiny: none
   user_migration_config:
     user:
       picture:
@@ -54,7 +54,7 @@ shared_configuration:
         target_bundles: {  }
       languages:
         default: es
-    build_migration_config: '1'
+    build_migration_config: null
     preserve_uid: null
     import_path_alias: null
     limit_import: ''
@@ -63,7 +63,4 @@ shared_configuration:
     origin_type: user
     listmediafields: null
     mw_database: drupal7
-  origin_formats:
-    filtered_html: full_html
-    full_html: full_html
-    plain_text: full_html
+  origin_formats: {  }

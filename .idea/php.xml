@@ -208,6 +208,20 @@
       <path value="$PROJECT_DIR$/drupal7/vendor/consolidation/annotated-command" />
       <path value="$PROJECT_DIR$/drupal7/vendor/drupal-composer/preserve-paths" />
       <path value="$PROJECT_DIR$/drupal7/vendor/cweagans/composer-patches" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/drupol/phpcsfixer-configs-php" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/drupol/phpcsfixer-configs-drupal" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/clue/ndjson-react" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/fidry/cpu-core-counter" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/react/event-loop" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/react/socket" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/react/dns" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/react/stream" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/react/child-process" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/react/cache" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/evenement/evenement" />
+      <path value="$PROJECT_DIR$/drupal10/vendor/friendsofphp/php-cs-fixer" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
