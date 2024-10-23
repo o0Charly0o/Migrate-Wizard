@@ -3,7 +3,7 @@ langcode: es
 status: true
 dependencies: {  }
 id: drupal72
-key: migrate
+key: migrate2
 migration_group: drupal72
 target: default
 host: db
@@ -17,4 +17,5 @@ namespace: Drupal\Core\Database\Driver\mysql
 collation: utf8mb4_general_ci
 url_files_prod: ''
 use_env: null
-shared_configuration: null
+shared_configuration:
+  origin_formats: {  }

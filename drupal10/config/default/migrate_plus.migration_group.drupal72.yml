@@ -1,0 +1,10 @@
+uuid: 40742d30-499d-4e5b-babe-efaad5a9da17
+langcode: es
+status: true
+dependencies: {  }
+id: drupal72
+label: drupal72
+description: ''
+source_type: null
+module: null
+shared_configuration: null

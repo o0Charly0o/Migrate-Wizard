@@ -1,0 +1,67 @@
+uuid: 0c003b7a-d8e0-480e-a3fa-bcce6238f2ed
+langcode: null
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_wizard
+id: noticias_drupalcamp_drupal72
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - drupal72
+migration_group: drupal72
+label: noticias_drupalcamp
+source:
+  plugin: mw_d7_node
+  constants:
+    file_destination: 'public://migrate/'
+    start_alias: /
+    langcode: null
+    source_base_path: ''
+  key: migrate2
+  mw_database: drupal72
+  bundle: noticias_drupalcamp
+  node_type: noticias_drupalcamp
+  origin_type: node
+process:
+  type:
+    plugin: default_value
+    default_value: article
+  created: created
+  status: status
+  title:
+    -
+      plugin: skip_on_empty
+      source: title
+      method: row
+  pseudo_body:
+    -
+      plugin: skip_on_empty
+      source: body
+      method: process
+  pseudo_body_destiny:
+    -
+      plugin: concat_data
+      source:
+        - '@pseudo_body'
+  body:
+    -
+      plugin: sub_process
+      source: '@pseudo_body_destiny'
+      process:
+        value: value
+        summary: summary
+        format:
+          plugin: static_map
+          source: format
+          map:
+            filtered_html: basic_html
+            full_html: full_html
+            plain_text: plain_text
+          default_value: full_html
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required: {  }

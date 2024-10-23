@@ -1,0 +1,80 @@
+uuid: 80d54371-a662-4bc0-a6a9-604ca90bffb8
+langcode: null
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_wizard
+id: article_drupal7
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - drupal7
+migration_group: drupal7
+label: article
+source:
+  plugin: mw_d7_node
+  constants:
+    file_destination: 'public://migrate/'
+    start_alias: /
+    langcode: null
+    source_base_path: 'http://drupal7.ddev.site'
+  key: migrate
+  mw_database: drupal7
+  bundle: article
+  node_type: article
+  origin_type: node
+process:
+  type:
+    plugin: default_value
+    default_value: article
+  created: created
+  status: status
+  title:
+    -
+      plugin: skip_on_empty
+      source: title
+      method: row
+  pseudo_body:
+    -
+      plugin: skip_on_empty
+      source: body
+      method: process
+  pseudo_body_destiny:
+    -
+      plugin: concat_data
+      source:
+        - '@pseudo_body'
+  body:
+    -
+      plugin: sub_process
+      source: '@pseudo_body_destiny'
+      process:
+        value: value
+        summary: summary
+        format:
+          plugin: static_map
+          source: format
+          map: {  }
+          default_value: full_html
+  pseudo_field_email:
+    -
+      plugin: skip_on_empty
+      source: field_email
+      method: process
+  pseudo_field_email_destiny:
+    -
+      plugin: concat_data
+      source:
+        - '@pseudo_field_email'
+  field_email:
+    -
+      plugin: sub_process
+      source: '@pseudo_field_email_destiny'
+      process:
+        value: email
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required: {  }
