@@ -1381,7 +1381,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/migrate_wizard.git",
-                "reference": "e45e976c1a8ea028f93bc45b735b994a583911a0"
+                "reference": "33209927006f1cc89f5d078e9df8729679764661"
             },
             "require": {
                 "drupal/core": "^10 || ^11",
@@ -1394,8 +1394,8 @@
                     "dev-3.0.x": "3.0.x-dev"
                 },
                 "drupal": {
-                    "version": "3.0.3+1-dev",
-                    "datestamp": "1729618785",
+                    "version": "3.0.4+1-dev",
+                    "datestamp": "1729769925",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
