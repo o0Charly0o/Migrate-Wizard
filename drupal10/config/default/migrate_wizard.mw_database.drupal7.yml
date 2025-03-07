@@ -1,4 +1,4 @@
-uuid: 9435d78e-045d-4757-9872-75d51dbea8b8
+uuid: 0e492902-75d1-4d76-919b-c668a405031a
 langcode: es
 status: true
 dependencies: {  }
@@ -22,22 +22,22 @@ shared_configuration:
     roles:
       3:
         origin: administrator
-        destiny: none
+        destiny: administrator
       1:
         origin: 'anonymous user'
-        destiny: none
+        destiny: anonymous
       2:
         origin: 'authenticated user'
-        destiny: none
+        destiny: authenticated
       4:
         origin: editor
-        destiny: none
+        destiny: content_editor
       6:
         origin: 'editor articulos'
-        destiny: none
+        destiny: editor_articulos
       5:
         origin: 'editor avanzado'
-        destiny: none
+        destiny: editor_avanzado
   user_migration_config:
     user:
       picture:
@@ -54,8 +54,8 @@ shared_configuration:
         target_bundles: {  }
       languages:
         default: es
-    build_migration_config: null
-    preserve_uid: null
+    build_migration_config: '1'
+    preserve_uid: '1'
     import_path_alias: null
     limit_import: ''
     import_only_ids: ''
@@ -63,4 +63,7 @@ shared_configuration:
     origin_type: user
     listmediafields: null
     mw_database: drupal7
-  origin_formats: {  }
+  origin_formats:
+    filtered_html: restricted_html
+    full_html: full_html
+    plain_text: plain_text

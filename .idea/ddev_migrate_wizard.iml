@@ -7,7 +7,9 @@
       <sourceFolder url="file://$MODULE_DIR$/drupal7/web/misc/typo3/phar-stream-wrapper/src" isTestSource="false" packagePrefix="TYPO3\PharStreamWrapper\" />
       <sourceFolder url="file://$MODULE_DIR$/drupal7/web/misc/typo3/phar-stream-wrapper/tests" isTestSource="true" packagePrefix="TYPO3\PharStreamWrapper\Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/drupal7/web/misc/typo3/phar-stream-wrapper/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/drupal10/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal7/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/drupal7/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component" isTestSource="false" packagePrefix="Drupal\Component\" />
       <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Annotation/" isTestSource="false" packagePrefix="Drupal\Component\Annotation\" />
       <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Assertion/" isTestSource="false" packagePrefix="Drupal\Component\Assertion\" />
@@ -34,8 +36,8 @@
       <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Uuid/" isTestSource="false" packagePrefix="Drupal\Component\Uuid\" />
       <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Component/Version/" isTestSource="false" packagePrefix="Drupal\Component\Version\" />
       <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/lib/Drupal/Core" isTestSource="false" packagePrefix="Drupal\Core\" />
-      <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/drupal10/web/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/composer-plugin-implements-scaffold-events/src" isTestSource="false" packagePrefix="Drupal\Tests\fixture\Composer\Plugin\" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/drupal10/vendor/asm89/stack-cors" />
       <excludeFolder url="file://$MODULE_DIR$/drupal10/vendor/chi-teck/drupal-code-generator" />
       <excludeFolder url="file://$MODULE_DIR$/drupal10/vendor/composer" />

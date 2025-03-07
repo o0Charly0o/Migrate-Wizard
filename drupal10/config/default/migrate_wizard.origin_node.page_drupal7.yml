@@ -1,0 +1,15 @@
+uuid: c6657562-6b37-430d-8177-9af4b639a499
+langcode: es
+status: true
+dependencies: {  }
+id: page_drupal7
+id_origin: page
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: 'Página básica'
+description: "Utilice <em>páginas básicas</em> para el contenido estático, por ejemplo la página 'Sobre nosotros'."
+source_type: sql
+module: migrate_wizard
+shared_configuration: 0

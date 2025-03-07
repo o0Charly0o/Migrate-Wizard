@@ -1,0 +1,164 @@
+uuid: 16492ea5-d29b-46dd-ac21-8126197b6e98
+langcode: es
+status: true
+dependencies: {  }
+id: article_drupal7
+id_origin: article
+database: drupal7
+use_env: null
+key: migrate
+target: default
+label: Artículo
+description: 'Use los <em>artículos</em> para contenido que tenga relevancia temporal como las noticias o las publicaciones en blogs.'
+source_type: sql
+module: migrate_wizard
+shared_configuration:
+  article:
+    title:
+      type: text
+      destiny: title
+      destiny_type: string
+      bundle: ''
+      target_bundles: {  }
+    body:
+      type: text_with_summary
+      destiny: body
+      destiny_type: text_with_summary
+      bundle: ''
+      target_bundles: {  }
+    field_tags:
+      type: taxonomy_term_reference
+      destiny: field_tags
+      destiny_type: entity_reference
+      bundle: ''
+      target_bundles: {  }
+      dependencies:
+        tags: none
+      target_type: null
+      migration_lookup:
+        - none
+    field_image:
+      type: image
+      destiny: field_imagemedia
+      destiny_type: entity_reference
+      bundle: ''
+      target_bundles: {  }
+      media_type: image
+      media_field: field_media_image
+    field_archivo:
+      type: file
+      destiny: field_archivo
+      destiny_type: file
+      bundle: ''
+      target_bundles: {  }
+      media_type: document
+      media_field: field_media_document
+    field_booleano:
+      type: list_boolean
+      destiny: field_booleano
+      destiny_type: boolean
+      bundle: ''
+      target_bundles: {  }
+    field_decimal:
+      type: number_decimal
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_float:
+      type: number_float
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_media:
+      type: image
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_mediafile:
+      type: file
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_audio:
+      type: file
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_video:
+      type: file
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_paginabasica:
+      type: entityreference
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+      dependencies:
+        page: none
+      target_type: node
+      migration_lookup:
+        - none
+    field_taxonomyreference:
+      type: entityreference
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+      dependencies:
+        tags: none
+      target_type: taxonomy_term
+      migration_lookup:
+        - none
+    field_paragraph_campo_tc:
+      type: paragraphs
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_field_collection_padre:
+      type: field_collection
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_email:
+      type: email
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+    field_date:
+      type: daterange
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+      format: ''
+    field_date_2:
+      type: daterange
+      destiny: none
+      destiny_type: ''
+      bundle: ''
+      target_bundles: {  }
+      format: ''
+    languages:
+      default: es
+  build_migration_config: '1'
+  preserve_nid: '1'
+  import_users: '1'
+  source_type_date_field: ''
+  import_path_alias: null
+  limit_import: ''
+  import_only_ids: ''
+  destiny_type: node
+  origin_type: node
+  listmediafields: null
+  mw_database: drupal7

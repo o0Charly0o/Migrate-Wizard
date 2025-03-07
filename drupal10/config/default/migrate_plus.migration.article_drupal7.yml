@@ -1,4 +1,4 @@
-uuid: 80d54371-a662-4bc0-a6a9-604ca90bffb8
+uuid: 82a06fc1-cea5-4f2b-a52c-f8eea526269b
 langcode: null
 status: true
 dependencies:
@@ -31,6 +31,12 @@ process:
     default_value: article
   created: created
   status: status
+  nid: nid
+  uid:
+    plugin: migration_lookup
+    migration: users_drupal7
+    source: node_uid
+    no_stub: true
   title:
     -
       plugin: skip_on_empty
@@ -56,25 +62,131 @@ process:
         format:
           plugin: static_map
           source: format
-          map: {  }
+          map:
+            filtered_html: restricted_html
+            full_html: full_html
+            plain_text: plain_text
           default_value: full_html
-  pseudo_field_email:
+  field_tags:
     -
       plugin: skip_on_empty
-      source: field_email
+      source: field_tags
       method: process
-  pseudo_field_email_destiny:
+    -
+      plugin: sub_process
+      method: process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: tid
+          migration:
+            - none
+          no_stub: true
+  pseudo_field_image:
+    -
+      plugin: skip_on_empty
+      source: field_image
+      method: process
+    -
+      plugin: sub_process
+      method: process
+      process:
+        bundle: bundle
+        field_name_destiny: field_media_image
+        source_full_path:
+          -
+            plugin: mw_concat
+            delimiter: /
+            source:
+              - source_base_path
+              - filepath
+          -
+            plugin: urlencode
+        uri_dest:
+          plugin: mw_file_copy
+          source:
+            - '@source_full_path'
+            - uri
+        fid:
+          plugin: mw_process_entity_file
+          source:
+            - '@source_full_path'
+            - '@uri_dest'
+            - filename
+            - filemime
+            - filesize
+            - status
+            - created
+            - changed
+            - uid
+        target_id:
+          plugin: mw_process_entity_media
+        alt: alt
+        title: title
+  pseudo_field_imagemedia_destiny:
     -
       plugin: concat_data
       source:
-        - '@pseudo_field_email'
-  field_email:
+        - '@pseudo_field_image'
+      method: process
+  field_imagemedia:
     -
       plugin: sub_process
-      source: '@pseudo_field_email_destiny'
+      source: '@pseudo_field_imagemedia_destiny'
+      method: process
       process:
-        value: email
+        target_id: target_id
+  field_archivo:
+    -
+      plugin: skip_on_empty
+      source: field_archivo
+      method: process
+    -
+      plugin: sub_process
+      method: process
+      process:
+        bundle: bundle
+        field_name_destiny: field_media_document
+        source_full_path:
+          -
+            plugin: mw_concat
+            delimiter: /
+            source:
+              - source_base_path
+              - filepath
+          -
+            plugin: urlencode
+        uri_dest:
+          plugin: mw_file_copy
+          source:
+            - '@source_full_path'
+            - uri
+        target_id:
+          plugin: mw_process_entity_file
+          source:
+            - '@source_full_path'
+            - '@uri_dest'
+            - filename
+            - filemime
+            - filesize
+            - status
+            - created
+            - changed
+            - uid
+        description: description
+  field_booleano:
+    -
+      plugin: skip_on_empty
+      source: field_booleano
+      method: process
+    -
+      plugin: sub_process
+      process:
+        value: value
+        format: format
 destination:
   plugin: 'entity:node'
 migration_dependencies:
-  required: {  }
+  required:
+    - users_drupal7
+    - none

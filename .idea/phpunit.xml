@@ -5,7 +5,6 @@
       <list>
         <option value="$PROJECT_DIR$/drupal7/web/misc/typo3/phar-stream-wrapper/tests" />
         <option value="$PROJECT_DIR$/drupal10/tests" />
-        <option value="$PROJECT_DIR$/drupal10/web/core/tests" />
       </list>
     </option>
   </component>
